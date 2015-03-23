@@ -6,7 +6,9 @@ namespace Microsoft.Framework.Runtime
 {
     public interface IAssemblyLoadContext : IDisposable
     {
+        //LOUDO: [Obsolete("Use IAssemblyLoadContext.Load(AssemblyName)")]
         Assembly Load(string name);
+        Assembly Load(AssemblyName name);
         Assembly LoadFile(string path);
         Assembly LoadStream(Stream assemblyStream, Stream assemblySymbols);
     }
