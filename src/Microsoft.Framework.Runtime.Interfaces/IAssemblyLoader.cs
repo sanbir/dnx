@@ -8,7 +8,8 @@ namespace Microsoft.Framework.Runtime
 {
     public interface IAssemblyLoader
     {
-        //LOUDO: [Obsolete("Use IAssemblyLoader.Load(AssemblyName)")]
+        //LOUDO: obsolete for finding usage
+        //[Obsolete("Use IAssemblyLoader.Load(AssemblyName)")]
         Assembly Load(string name);
         Assembly Load(AssemblyName name);
     }
