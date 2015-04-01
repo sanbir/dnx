@@ -78,6 +78,7 @@ namespace Microsoft.Framework.PackageManager
             foreach(var applicationPackage in applicationPackagesStillUsed)
             {
                 var appLockFileFullPath = Path.Combine(
+                    packagesRepo.RepositoryRoot.Root,
                     _commandsRepo.PathResolver.GetPackageDirectory(applicationPackage.Id, applicationPackage.Version),
                     InstallBuilder.CommandsFolderName,
                     LockFileFormat.LockFileName);
